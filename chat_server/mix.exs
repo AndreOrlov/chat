@@ -24,6 +24,11 @@ defmodule ChatServer.MixProject do
     [
       {:plug_cowboy, "~> 2.0"},
 
+      # test
+      # TODO: rad
+      # {:console_chat, path: "../../console_chat", only: :test, runtime: false},
+      {:console_chat, path: "../../console_chat", runtime: true},
+
       # code climate
       {:credo, "~> 1.6", only: [:dev, :test], runtime: false},
       {:dialyxir, "~> 1.4", only: [:dev], runtime: false}

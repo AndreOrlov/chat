@@ -27,9 +27,13 @@ defmodule ConsoleChat do
   @impl true
   def handle_frame({:text, msg}, state) do
     IO.puts msg
+    send(self(), msg)
+    IO.inspect(msg, label: ANDRE_handle_frame1)
     {:ok, state}
   end
   def handle_frame(_frame, state) do
+    send(self(), "DEFAULT")
+    IO.inspect(label: ANDRE_handle_frame2)
     {:ok, state}
   end
 
