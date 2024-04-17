@@ -33,5 +33,3 @@
 По url `http://localhost:4000` выдаст подсказку url своего websocket
 
 Url websocket `ws://localhost:4000/ws`
-
-Выход/остановить сервер - Ctrl+C два раза в консоли сервера.
